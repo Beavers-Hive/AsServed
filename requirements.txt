@@ -1,0 +1,15 @@
+# As Served — 実寸卓上メニューサイン
+numpy>=1.26,<2.0
+opencv-python>=4.9
+pygame>=2.5
+Pillow>=10.0          # 日本語テキストの描画（render.py）
+
+# macOS でのカメラ直接キャプチャ（src/avf_camera.py）とデバイス列挙（src/list_cameras.py）
+pyobjc-framework-AVFoundation>=10.0 ; sys_platform == "darwin"
+pyobjc-framework-libdispatch>=10.0 ; sys_platform == "darwin"
+
+# SO-101 / XIAO とのシリアル通信（--arm serial のときのみ必要）
+pyserial>=3.5
+
+# 指差し入力（--pointer hand）。モデルは同梱せず src/fetch_model.py で取得する
+mediapipe>=1.0

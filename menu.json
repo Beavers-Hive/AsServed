@@ -1,0 +1,145 @@
+{
+  "_comment": "寸法は mm、重量は g。food_diameter_mm は『投影画像の幅が実際に何 mm になるか』であり、実寸表示の根拠そのもの。ピザなら生地、麺類なら盛り付けの外径。dry_g は麺類だけで使う任意項目。utensil は注文後にアームが運ぶ食器（fork / chopsticks）。slice_options はカットできる料理だけに書く（ピザ用）。",
+  "dishes": [
+    {
+      "id": "margherita",
+      "name_ja": "マルゲリータ",
+      "name_en": "Margherita",
+      "image": "assets/dishes/pizza_margherita.png",
+      "utensil": "fork",
+      "allergens_ja": [
+        "小麦",
+        "乳"
+      ],
+      "allergens_en": [
+        "wheat",
+        "milk"
+      ],
+      "slice_options": [
+        4,
+        6,
+        8
+      ],
+      "portions": [
+        {
+          "label": "S",
+          "served_g": 290,
+          "kcal": 620,
+          "price_yen": 980,
+          "plate_diameter_mm": 255,
+          "food_diameter_mm": 220
+        },
+        {
+          "label": "M",
+          "served_g": 440,
+          "kcal": 950,
+          "price_yen": 1380,
+          "plate_diameter_mm": 305,
+          "food_diameter_mm": 270
+        },
+        {
+          "label": "L",
+          "served_g": 630,
+          "kcal": 1350,
+          "price_yen": 1880,
+          "plate_diameter_mm": 355,
+          "food_diameter_mm": 320
+        }
+      ]
+    },
+    {
+      "id": "napolitan",
+      "name_ja": "ナポリタン",
+      "name_en": "Napolitan",
+      "image": "assets/dishes/napolitan.png",
+      "utensil": "fork",
+      "allergens_ja": [
+        "小麦",
+        "乳",
+        "卵"
+      ],
+      "allergens_en": [
+        "wheat",
+        "milk",
+        "egg"
+      ],
+      "portions": [
+        {
+          "label": "S",
+          "dry_g": 80,
+          "served_g": 220,
+          "kcal": 520,
+          "price_yen": 980,
+          "plate_diameter_mm": 230,
+          "food_diameter_mm": 185
+        },
+        {
+          "label": "M",
+          "dry_g": 110,
+          "served_g": 300,
+          "kcal": 690,
+          "price_yen": 1280,
+          "plate_diameter_mm": 260,
+          "food_diameter_mm": 215
+        },
+        {
+          "label": "L",
+          "dry_g": 150,
+          "served_g": 400,
+          "kcal": 930,
+          "price_yen": 1580,
+          "plate_diameter_mm": 290,
+          "food_diameter_mm": 245
+        }
+      ]
+    },
+    {
+      "id": "shoyu_ramen",
+      "name_ja": "醤油ラーメン",
+      "name_en": "Shoyu Ramen",
+      "image": "assets/dishes/ramen_shoyu.png",
+      "utensil": "chopsticks",
+      "allergens_ja": [
+        "小麦",
+        "卵",
+        "大豆",
+        "豚肉"
+      ],
+      "allergens_en": [
+        "wheat",
+        "egg",
+        "soy",
+        "pork"
+      ],
+      "portions": [
+        {
+          "label": "S",
+          "dry_g": 100,
+          "served_g": 520,
+          "kcal": 560,
+          "price_yen": 980,
+          "plate_diameter_mm": 230,
+          "food_diameter_mm": 210
+        },
+        {
+          "label": "M",
+          "dry_g": 130,
+          "served_g": 650,
+          "kcal": 710,
+          "price_yen": 1180,
+          "plate_diameter_mm": 250,
+          "food_diameter_mm": 230
+        },
+        {
+          "label": "L",
+          "dry_g": 160,
+          "served_g": 780,
+          "kcal": 860,
+          "price_yen": 1380,
+          "plate_diameter_mm": 270,
+          "food_diameter_mm": 250
+        }
+      ]
+    }
+  ]
+}

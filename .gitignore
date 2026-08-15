@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+captures/
+logs/
+
+# 較正結果は環境依存なので共有しない（各自 calibrate で作る）
+calibration.json
+metric.json
+.pytest_cache/
+models/
+arm/firmware_xiao/.pio/
+arm/ik/.venv/
+arm/ik/vendor/

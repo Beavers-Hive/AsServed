@@ -1,0 +1,5 @@
+numpy>=2.0,<2.3
+placo>=0.9.6,<0.9.16
+cmeel-urdfdom>=4,<5
+cmeel-tinyxml2<11
+pyserial>=3.5,<4

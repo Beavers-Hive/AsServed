@@ -1,0 +1,79 @@
+{
+  "camera": {
+    "_comment": "auto_exposure: このカメラは AVCaptureExposureModeCustom 非対応で、false にすると起動時の露出のまま固定され真っ暗になる。true(自動)が既定。fps は null（30 を指定すると AVFoundation が丸め誤差で拒否してエラーを出す）。",
+    "backend": "avf",
+    "name": "16MP USB Camera",
+    "uid": null,
+    "index": 1,
+    "width": 1280,
+    "height": 720,
+    "fourcc": null,
+    "fps": null,
+    "autofocus": null,
+    "focus": null,
+    "auto_exposure": true,
+    "exposure": 0.004,
+    "gain": 100
+  },
+  "aruco": {
+    "dict": "DICT_4X4_50",
+    "id": 0,
+    "marker_length_m": 0.06,
+    "ema_alpha": 0.6,
+    "clahe": false,
+    "detector_params": {}
+  },
+  "projector": {
+    "_comment": "mode: borderless=デスクトップと同じ大きさの枠なしウィンドウでディスプレイを覆う（macOS 既定。他ウィンドウをクリックしても消えない）。fullscreen=SDL の真フルスクリーン。 above_menu_bar: null=自動（2画面目に出すときだけ macOS のメニューバーより前面にする）、true=常に前面、false=しない。主画面(display_index=0)で true にすると操作用ウィンドウが隠れて何もできなくなるので注意。width/height は list_displays.py で確認した実解像度に合わせること。",
+    "display_index": 1,
+    "width": 1920,
+    "height": 1080,
+    "fullscreen": true,
+    "margin_ratio": 0.1,
+    "mode": "borderless",
+    "above_menu_bar": null
+  },
+  "calibration_file": "calibration.json",
+  "metric_file": "metric.json",
+  "table_sign": {
+    "_comment": "serving_center_mm は較正ボードの原点を基準にした提供位置。null なら投影範囲から自動で中央に置く。実機ではアームの PLACE 姿勢と一致させるので必ず固定値を入れること。--check で投影範囲と的の配置を確認できる。 language: 起動時の表示言語（en / ja）。実行中は e キーで切り替えられる。",
+    "serving_center_mm": null,
+    "margin_mm": 24.0,
+    "dish_tile_mm": 110.0,
+    "size_button_mm": 92.0,
+    "dwell_seconds": 3.0,
+    "dwell_grace_seconds": 0.35,
+    "language": "en",
+    "slice_button_mm": 72.0,
+    "slice_gap_mm": 8.0
+  },
+  "pointer": {
+    "_comment": "kind: none(キーボードのみ) / hand(指差し) / scripted(擬似ポインタ)。offset_mm は指の浮きによる系統的なズレを実測して打ち消すための補正。",
+    "kind": "none",
+    "model_path": "models/hand_landmarker.task",
+    "ema_alpha": 0.45,
+    "offset_mm": [
+      0.0,
+      0.0
+    ],
+    "min_detection_confidence": 0.5,
+    "min_tracking_confidence": 0.5
+  },
+  "pinch": {
+    "_comment": "src/pinch_distance.py（親指と人差し指の距離）の調整。filter: euro=1€ フィルタ / ema=固定係数 / none=生の値。min_cutoff を下げるほど静止時の数字が静かになり、beta を上げるほど速い動きに追従する。step_mm は表示の丸め幅、deadband_mm はそれだけ動くまで数字を書き換えない量（step_mm の半分より大きくすること）。CLI 引数を渡すとそちらが優先。 ref_mm: 手首から中指の付け根までの実測 mm。入れると world のスケール推定のずれ（左右・遠近で値が変わる主因）を打ち消す。null で補正なし。",
+    "filter": "euro",
+    "min_cutoff": 0.7,
+    "beta": 0.015,
+    "step_mm": 1.0,
+    "deadband_mm": 1.5,
+    "pinch_mm": 30.0,
+    "ref_mm": null
+  },
+  "arm": {
+    "_comment": "--arm serial のときに使う。port は `ls /dev/cu.usbmodem*` で確認する。motion_seconds はXIAOの固定軌道が完了するまで次の注文を送らない時間。",
+    "port": null,
+    "baud": 115200,
+    "timeout_s": 5.0,
+    "motion_seconds": 18.0
+  }
+}
