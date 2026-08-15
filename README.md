@@ -240,6 +240,32 @@ this — can start with the projector alone and add the arm later.
 - SO-101 arm (6× Feetech STS3215), 3D printed utensil rack
 - Printed ArUco calibration board (A4)
 
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+### About the sample dish images
+
+The dish images under `assets/dishes/` are **AI-generated**, not photographs of real food,
+and are provided so the project runs out of the box. They carry the same MIT terms as the
+rest of the repository.
+
+For a real deployment, replace them with top-down images of your own dishes and measure
+the actual diameter — `food_diameter_mm` in `menu.json` is what makes the projection life
+size, so a stand-in image means a stand-in claim.
+
+### Third-party components
+
+Nothing third-party is vendored in this repository. Each is fetched at setup time by the
+person building it:
+
+| Component | How it is obtained | License |
+|---|---|---|
+| MediaPipe hand landmark model | `src/fetch_model.py` (Google) | Apache-2.0 |
+| SO-101 URDF | cloned from TheRobotStudio/SO-ARM100 | upstream |
+| FTServo Arduino library | PlatformIO `lib_deps` | upstream |
+| KeiFont (subtitles, video tooling) | not part of this repository | — |
+
 ## Credits
 
 The projection pipeline (ArUco tracking, four-corner homography calibration, pygame

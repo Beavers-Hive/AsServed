@@ -191,7 +191,7 @@ Then:
 uv run python src/table_sign.py --pointer hand --arm serial --arm-port /dev/cu.usbmodemXXXX
 ```
 
-Adding a dish is a `menu.json` entry plus a top-down photo. The image width **is** the
+Adding a dish is a `menu.json` entry plus a top-down image. The image width **is** the
 dish diameter in millimetres, so a preparation script crops the background away to zero
 padding — a few percent of stray margin would quietly shrink every projection.
 
@@ -226,5 +226,10 @@ padding — a few percent of stray margin would quietly shrink every projection.
 - PlatformIO / Arduino (XIAO firmware), FTServo library
 
 ---
+
+The code is MIT licensed. The sample dish images in the repository are AI-generated
+rather than photographs, so the project runs out of the box — for a real deployment you
+would shoot your own dishes from above and measure the diameter, because that measurement
+is what makes the projection life size.
 
 *Built for the Seeed Studio "Make a Sign — Interactive Signage Contest 2026".*
